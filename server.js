@@ -48,7 +48,7 @@ io.on('connection', function(socket) {
 				text: userData.name + ' has left!',
 				timestamp: moment().valueOf()
 			});
-			delete userData;
+			delete clientInfo[socket.id];
 		}
 	});
 
